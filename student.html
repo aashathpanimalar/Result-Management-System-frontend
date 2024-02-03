@@ -1,0 +1,188 @@
+<html>
+
+<head>
+  <title>PEC COE - Student Portal</title>
+  <link rel="shortcut icon" type="x-icon"
+    href="https://pbs.twimg.com/profile_images/1274710787911647233/m7ezkR-7_400x400.jpg">
+  <style>
+    body {
+      background-image: url("https://panimalar.ac.in/assets/images/AboutUs/about-us-banner-img.jpg");
+      background-size: contain;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    form {
+      margin: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+
+    input[type="text"] {
+      width: 250px;
+      padding: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    input[type="number"] {
+      padding: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    .sign {
+      background-color: green;
+      color: white;
+      border: solid;
+      padding: 10px 20px;
+      font-size: 20px;
+      margin-top: 15px;
+      cursor: pointer;
+      margin-right: 13px;
+      margin-left: 0px;
+      margin-top: 0%;
+      width: 67%;
+      font-family: Arial;
+      font-weight: bold;
+      opacity: 0.2s;
+      border-radius: 9px;
+
+    }
+
+    fieldset {
+      background-color: white;
+      width: 420px;
+      padding: 0px;
+      margin-left: 8%;
+      margin-top: 2%;
+      margin-right: 68%;
+      border-color: orangered;
+      border-radius: 30px;
+      border-width: 3px;
+    }
+
+    .cgpa {
+      background-color: #ff00ff;
+      margin-left: 19%;
+      margin-top: 0%;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 20px;
+
+
+    }
+
+    button:hover {}
+
+    #t1 {
+      background-color: lightgray;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+      text-align: center;
+      width: 26.5%;
+    }
+
+    .captcha {
+      height: 17%;
+      font-size: 15px;
+      cursor: pointer;
+      margin-top: 7.5%;
+      width: 65%;
+      border-radius: 0px;
+
+    }
+
+    h3 {
+      margin-left: 9%;
+      color: aqua;
+      display: inline;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <fieldset>
+    <center>
+      <h1 style="color:#2565AE; font-size: 150%;">WELCOME TO <br>PANIMALAR ENGINEERING COLLEGE</h1>
+      <a><img src="https://pbs.twimg.com/profile_images/1274710787911647233/m7ezkR-7_400x400.jpg" width="100px"
+          height="100px"></a>
+      <h1 style="color:#DC143C; font-size: 150%;">COE - STUDENT PORTAL</h1>
+    </center>
+    <form action="student.php" method="post">
+      <center>
+        <table>
+          <tr>
+            <td><input type="number" placeholder="ENTER REG NO" name="regno" id="regno" required style="width:250px; ">
+            </td>
+          </tr>
+          <tr>
+            <td><input type="text" name="dob" id="dob" required style="margin-top: 7%;" placeholder="DOB in dd-mm-yyyy"></td>
+          </tr>
+          <tr>
+            <td style="display: flex;">
+              <input type="number" placeholder="Enter Captcha" id="t2" class="captcha" required
+                style="border-radius:0px;">
+              <h2 id="t1">image</h2>
+            </td>
+          </tr>
+        </table>
+      </center>
+      <center><button onclick="return validateCaptcha();" class="sign" name="signIn">Sign In</button></center>
+    </form>
+  </fieldset>
+  <a href="index.html">
+    <h3>Home</h3>
+  </a><br>
+  <a href="cgpa.html">
+    <button class="cgpa"><b>CGPA Calculator</b></button>
+    <br><br>
+
+
+    <script>
+      var a = document.getElementById("t1");
+      var b = Math.floor((Math.random() * 100000) + 1);
+      
+      if (b < 10000) {
+        b = b + 10000;
+      }
+      a.textContent = b;
+      function validateCaptcha() {
+        var captchaInput = document.getElementById("t2").value;
+
+        if (captchaInput == b) {
+          return true;
+        }
+
+        else {
+          alert("Enter a valid Captcha");
+          location.reload();
+          return false;
+
+        }
+
+      }
+
+    </script>
+
+</body>
+
+</html>

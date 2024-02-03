@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <title>Faculty Login</title>
+    <link rel="shortcut icon" type="x-icon"
+        href="https://pbs.twimg.com/profile_images/1274710787911647233/m7ezkR-7_400x400.jpg">
+    <style>
+        body {
+            background-image: url("https://panimalar.ac.in/assets/images/AboutUs/about-us-banner-img.jpg");
+            background-size: contain;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+
+        input[type="text"] {
+            width: 250px;
+            padding: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        input[type="password"] {
+            padding: 5px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-width: 2px;
+            border-style: solid;
+            width: 250px;
+        }
+
+        .sign {
+            background-color: green;
+            color: white;
+            border: solid;
+            padding: 10px 20px;
+            font-size: 20px;
+            margin-top: 15px;
+            cursor: pointer;
+            margin-right: 13px;
+            margin-left: 0px;
+            margin-top: 0%;
+            width: 67%;
+            font-family: Arial;
+            font-weight: bold;
+            opacity: 0.2s;
+            border-radius: 9px;
+
+        }
+
+        fieldset {
+            background-color: white;
+            width: 420px;
+            padding: 0px;
+            margin-top: 2%;
+            margin-left: 30%;
+            border-color: orangered;
+            border-radius: 30px;
+            border-width: 3px;
+        }
+
+        .cgpa {
+            background-color: #ff00ff;
+            margin-left: 19%;
+            margin-top: 0%;
+            cursor: pointer;
+            padding: 6px;
+            border-radius: 20px;
+
+
+        }
+
+        button:hover {}
+
+        #t1 {
+            background-color: lightgray;
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+            text-align: center;
+            width: 26.5%;
+        }
+
+        .captcha {
+            height: 17%;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 7.5%;
+            width: 65%;
+            border-radius: 0px;
+
+        }
+
+        h3 {
+            margin-left: 9%;
+            color: aqua;
+            display: inline;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <center>
+            <h1 style="color:#2565AE; font-size: 150%;">WELCOME TO <br>PANIMALAR ENGINEERING COLLEGE</h1>
+            <a><img src="https://pbs.twimg.com/profile_images/1274710787911647233/m7ezkR-7_400x400.jpg" width="150px"
+                    height="150px"></a>
+            <h1 style="color:#DC143C; font-size: 150%;">FACULTY LOGIN</h1>
+        </center>
+        <form action="admin2.html">
+            <center>
+                <table>
+                    <tr>
+                        <td><input type="text" placeholder="FACULTY USERNAME" id="username" required
+                                style="width:250px; ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" required style="margin-top: 7%;" placeholder="PASSWORD"
+                                id="password"></td>
+                    </tr>
+
+                </table>
+            </center><br>
+
+            <center>
+                <button onclick="return validate();" class="sign">Sign In</button>
+            </center>
+        </form>
+    </fieldset>
+    <a href="index.html">
+        <h3>Home</h3>
+    </a><br>
+
+    <script>
+        var a = document.getElementById("username");
+        var b = document.getElementById("password");
+
+        function validate() {
+            if (a.value === "" || b.value === "") {
+                alert("please Fill Both Fields")
+            }
+
+            else if (a.value === "AashathIT@pec.in" && b.value === "aashath0903") {
+                return true;
+            }
+            else {
+                alert("Username/Password is Wrong");
+                location.reload();
+                return false;
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

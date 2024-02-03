@@ -1,0 +1,203 @@
+<head>
+  <style>
+    marquee {
+      background-color: yellow;
+      color: black;
+    }
+
+    input[type="submit"] {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      margin-left: 8%;
+    }
+    #gpa1,#gpa2,#gpa3,#cgpa{
+      text-align: center;
+    }
+
+    input[type="submit"]:hover {
+      border-radius: 100px;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    label {
+      background-color: yellow;
+    }
+
+    body {
+      font-family: Arial;
+      background-image: url("https://i.ytimg.com/vi/6zgoesr5I6Y/maxresdefault.jpg");
+      background-size: contain;
+      margin: 0;
+      padding: 0;
+    }
+
+    fieldset {
+      margin-left: 68%;
+      margin-right: 8%;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      /* Adjusted padding */
+    }
+
+    input[type="number"] {
+      cursor: pointer;
+      width: 52%;
+    }
+
+    input[type="text"] {
+      cursor: pointer;
+      width: 52%;
+      margin-left: 30%;
+    }
+
+    select {
+      cursor: pointer;
+      width: 52%;
+      margin-left: 26%;
+
+    }
+
+    label {
+      margin-left: 42%;
+    }
+
+    #cgpa {
+      width: 60%;
+      margin-left: 20%;
+    }
+
+    img {
+      margin-left: 20%;
+    }
+
+    #gpa1,
+    #gpa2,
+    #gpa3 {
+      width: 80%;
+      margin-left: 20%;
+    }
+   
+
+    .in {
+      display: inline;
+      background-color: aqua;
+
+    }
+
+    /* Responsive Styling */
+    @media only screen and (max-width: 600px) {
+      fieldset {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+    h3{
+      margin-left: 68%;
+      color:red;
+      display: inline;
+      
+    }
+
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="student.html"><h3>Back</h3></a>
+  <fieldset>
+    <table>
+      <marquee>PEC CGPA Calculation</marquee>
+      <br><br>
+      <img src="https://pbs.twimg.com/profile_images/1274710787911647233/m7ezkR-7_400x400.jpg" height="180px"
+        width="180px" alt="University Logo">
+      <br>
+      <hr>
+      <div>
+        <tr>
+          <b>Register Number:</b><input type="number" id="regno">
+        </tr>
+        <br><br>
+        <hr>
+        <tr>
+          <b>Name:</b><input type="text" id="name">
+        </tr>
+        <br><br>
+        <hr>
+        <tr>
+          <b>Course:</b>
+          <select placeholder="SELECT">
+
+            <option>B.E CSE</option>
+            <option>B.TECH IT</option>
+            <option>B.E ECE</option>
+            <option>B.E EEE</option>
+            <option>B.TECH AIDS</option>
+            <option>B.TECH AIML</option>
+            <option>B.E MECH</option>
+          </select>
+        </tr>
+      </div>
+
+      <br><br>
+      <hr>
+      <input type="submit" onClick="cgpa()" value="Click Here To Calculate Cgpa"><br>
+      <br>
+      <hr>
+      <mark style="margin-left: 2%;">SEMESTER</mark>
+      <mark style="margin-left: 32% ;">GPA</mark>
+      <div>
+        <tr>
+          <td>
+            <h4 class="in">Semester 1:</h4>
+          </td>
+          <td><input type="number" id="gpa1" readonly></td>
+        </tr>
+        <tr>
+          <td>
+            <h4 class="in">Semester 2:</h4>
+          </td>
+          <td><input type="number" id="gpa2" readonly></td>
+        </tr>
+        <tr>
+          <td>
+            <h4 class="in">Semester 3:</h4>
+          </td>
+          <td><input type="number" id="gpa3" readonly></td>
+        </tr>
+      </div>
+    </table>
+    <hr>
+    <label for="cgpa">CGPA</label><br>
+    <input type="text" id="cgpa" readonly>
+  </fieldset>
+  <script>
+    function cgpa() {
+      var a = parseFloat(prompt("Enter 1st Semester Gpa:")) || 0;
+      var b = parseFloat(prompt("Enter 2nd Semester Gpa:")) || 0;
+      var c = parseFloat(prompt("Enter 3rd Semester Gpa:")) || 0;
+
+      document.getElementById('gpa1').value = a;
+      document.getElementById('gpa2').value = b;
+      document.getElementById('gpa3').value = c;
+
+      var cgpa = (a + b + c) / 3;
+
+      document.getElementById('cgpa').value = cgpa;
+    }
+  </script>
+  
+</body>
+
+</html>

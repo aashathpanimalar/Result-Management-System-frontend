@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Result Upload</title>
+    <link rel="shortcut icon" type="x-icon"
+        href="https://pbs.twimg.com/profile_images/1274710787911647233/m7ezkR-7_400x400.jpg">
+
+    <style>
+        .field {
+            margin: 10%;
+            background-color: antiquewhite;
+            margin-left: 25%;
+            margin-right: 25%;
+            border-width: 7px;
+            border-color: black;
+            border-radius: 25px;
+            border-style: solid;
+        }
+
+        fieldset {
+            margin: 5%;
+            background-color: antiquewhite;
+            border-width: 3px;
+            border-style: solid;
+            border-color: black;
+        }
+
+        hr {
+            border-color: black;
+        }
+
+        .spacing {
+            word-spacing: 205px;
+        }
+
+        p {
+            text-align: center;
+
+        }
+
+        * {
+            text-transform: uppercase;
+        }
+
+        .margin-left {
+            margin-left: 7%;
+        }
+
+        h3 {
+            display: inline;
+            margin-left: 12%;
+            background-color: yellow;
+        }
+
+        button {
+            margin-left: 44%;
+        }
+
+        h4 {
+            margin-left: 39%;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            text-align: center;
+            border-width: 2px;
+            cursor: pointer;
+
+        }
+
+        input[type="text"]:hover::placeholder {
+            visibility: hidden;
+        }
+
+        input[type="number"]:hover::placeholder {
+            visibility: hidden;
+        }
+
+        button {
+            background-color: green;
+            color: white;
+            border-width: 2px;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            margin-left: 40%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body bgcolor="lightblue">
+    <form action="admin2.php" method="post">
+        <fieldset class="field">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <h2>Student Name:</h2>
+                        </td>
+                        <td><input type="text" id="name" name="sname" style=" text-transform: capitalize;"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Register Number:</h2>
+                        </td>
+                        <td><input type="number" id="reg" name="reg" placeholder="2114XXXXXXXX"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Date-Of-Birth:</h2>
+                        </td>
+                        <td><input type="text" id="dob" name="dob" placeholder="dd-mm-yyyy"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>Department:</h2>
+                        </td>
+                        <td><input type="text" id="dep" name="dep" style=" text-transform: capitalize;"
+                                placeholder="EX:B.Tech IT"></td>
+                    </tr>
+                </table>
+            </center>
+        </fieldset>
+
+        <fieldset>
+            <table border="1">
+                <tr>
+                    <div>
+                        <h3>SEMESTER</h3>
+                        <h3>SUBJECT-CODE</h3>
+                        <h3>GRADE</h3>
+                        <h3 style="margin-left: 16%;">RESULT</h3>
+
+                    </div>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem1" id="fsem1" placeholder="Example:3">
+                        <input type="text" class="margin-left" name="fsubject1" id="fsubject1"  placeholder="Example:21IT1401">
+                        <input type="text" class="margin-left" name="fgrade1" id="fgrade1"  placeholder="Example:A+">
+                        <input type="text" class="margin-left" name="fresult1" id="fresult1"  placeholder="Example:PASS">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem2" id="fsem2">
+                        <input type="text" class="margin-left" name="fsubject2" id="fsubject2">
+                        <input type="text" class="margin-left" name="fgrade2" id="fgrade2">
+                        <input type="text" class="margin-left" name="fresult2" id="fresult2">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem3" id="fsem3">
+                        <input type="text" class="margin-left" name="fsubject3" id="fsubject3">
+                        <input type="text" class="margin-left" name="fgrade3" id="fgrade3">
+                        <input type="text" class="margin-left" name="fresult3" id="fresult3">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem4" id="fsem4">
+                        <input type="text" class="margin-left" name="fsubject4" id="fsubject4">
+                        <input type="text" class="margin-left" name="fgrade4" id="fgrade4">
+                        <input type="text" class="margin-left" name="fresult4" id="fresult4">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem5" id="fsem5">
+                        <input type="text" class="margin-left" name="fsubject5" id="fsubject5">
+                        <input type="text" class="margin-left" name="fgrade5" id="fgrade5">
+                        <input type="text" class="margin-left" name="fresult5" id="fresult5">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem6" id="fsem6">
+                        <input type="text" class="margin-left" name="fsubject6" id="fsubject6">
+                        <input type="text" class="margin-left" name="fgrade6" id="fgrade6">
+                        <input type="text" class="margin-left" name="fresult6" id="fresult6">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem7" id="fsem7">
+                        <input type="text" class="margin-left" name="fsubject7" id="fsubject7">
+                        <input type="text" class="margin-left" name="fgrade7" id="fgrade7">
+                        <input type="text" class="margin-left" name="fresult7" id="fresult7">
+                    </p>
+                </tr>
+                <hr>
+                <tr>
+                    <p>
+                        <input type="text" style="margin-left: 0%;" name="fsem8" id="fsem8">
+                        <input type="text" class="margin-left" name="fsubject8" id="fsubject8">
+                        <input type="text" class="margin-left" name="fgrade8" id="fgrade8">
+                        <input type="text" class="margin-left" name="fresult8" id="fresult8">
+                    </p>
+                </tr>
+                <hr>
+                <h4>GPA:<input type="text" name="gpa" id="gpa"></h4>
+                <hr>
+                <button onclick="return validate();">Insert into Database</button>
+
+
+    </form>
+    </table>
+    </fieldset>
+
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value
+            var reg = document.getElementById("reg").value
+            var dob = document.getElementById("dob").value
+            var dep = document.getElementById("dep").value
+            if (name == "") {
+                alert("Please fill the Name Field")
+                return false;
+            }
+            if (reg == "") {
+                alert("Register Number is Must")
+                return false;
+            }
+            if (dob == "") {
+                alert("Please fill Date Of Birth")
+                return false;
+            }
+            if (dep == "") {
+                alert("Please fill the Department Field")
+                return false;
+            }
+
+            var fsem1 = document.getElementById("fsem1").value;
+            var fsem2 = document.getElementById("fsem2").value;
+            var fsem3 = document.getElementById("fsem3").value;
+            var fsem4 = document.getElementById("fsem4").value;
+            var fsem5 = document.getElementById("fsem5").value;
+            var fsem6 = document.getElementById("fsem6").value;
+            var fsem7 = document.getElementById("fsem7").value;
+            var fsem8 = document.getElementById("fsem8").value;
+
+            var fsubject1 = document.getElementById("fsubject1").value;
+            var fsubject2 = document.getElementById("fsubject2").value;
+            var fsubject3 = document.getElementById("fsubject3").value;
+            var fsubject4 = document.getElementById("fsubject4").value;
+            var fsubject5 = document.getElementById("fsubject5").value;
+            var fsubject6 = document.getElementById("fsubject6").value;
+            var fsubject7 = document.getElementById("fsubject7").value;
+            var fsubject8 = document.getElementById("fsubject8").value;
+
+            var fgrade1 = document.getElementById("fgrade1").value;
+            var fgrade2 = document.getElementById("fgrade2").value;
+            var fgrade3 = document.getElementById("fgrade3").value;
+            var fgrade4 = document.getElementById("fgrade4").value;
+            var fgrade5 = document.getElementById("fgrade5").value;
+            var fgrade6 = document.getElementById("fgrade6").value;
+            var fgrade7 = document.getElementById("fgrade7").value;
+            var fgrade8 = document.getElementById("fgrade8").value;
+
+            var fresult1 = document.getElementById("fresult1").value;
+            var fresult2 = document.getElementById("fresult2").value;
+            var fresult3 = document.getElementById("fresult3").value;
+            var fresult4 = document.getElementById("fresult4").value;
+            var fresult5 = document.getElementById("fresult5").value;
+            var fresult6 = document.getElementById("fresult6").value;
+            var fresult7 = document.getElementById("fresult7").value;
+            var fresult8 = document.getElementById("fresult8").value;
+
+            var gpa = document.getElementById("gpa").value;
+
+
+
+            if (fsem1 == "" || fsem2 == "" || fsem3 == "" || fsem4 == "" || fsem5 == "" || fsem6 == "" || fsem7 == "" || fsem8 == "") {
+                alert("Fill All the Semester Fields");
+                return false;
+            }
+            else if (fsubject1 == "" || fsubject2 == "" || fsubject3 == "" || fsubject4 == "" || fsubject5 == "" || fsubject6 == "" || fsubject7 == "" || fsubject8 == "") {
+                alert("Please Fill All the Subject-code");
+                return false;
+            }
+            else if (fgrade1 == "" || fgrade2 == "" || fgrade3 == "" || fgrade4 == "" || fgrade5 == "" || fgrade6 == "" || fgrade7 == "" || fgrade8 == "") {
+                alert("Fill All the Grades Fields");
+                return false;
+            }
+            else if (fresult1 == "" || fresult2 == "" || fresult3 == "" || fresult4 == "" || fresult5 == "" || fresult6 == "" || fresult7 == "" || fresult8 == "") {
+                alert("Please Fill All the Result Fields");
+                return false;
+            }
+            else if (gpa == "") {
+                alert("Please Enter the GPA");
+                return false;
+            }
+            else {
+                return true;
+            }
+
+        }
+    </script>
+
+    </form>
+</body>
+
+</html>
