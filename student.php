@@ -110,7 +110,9 @@ if ($result->num_rows > 0) {
     }
 
 } else {
-    echo "<p>No data available</p>";
+    echo "<p>No data available for this Register Number and DOB </p>";
+    echo "<p>Please Check Once </p>";
+    echo" <a href=student.html>Go Back</a>";
 }
 
 $conn->close();
