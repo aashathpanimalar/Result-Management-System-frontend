@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli('localhost:3307', 'root', '', 'pec');
+$conn = new mysqli('localhost:3306', 'root', '', 'pec');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -16,14 +16,18 @@ if ($result->num_rows > 0) {
     <fieldset>
     <mark>  <marquee id='marquee' direction='left' style='color:#B200ED'><b>PANIMALAR ENGINEERING COLLEGE,CHENNAI-600123 \ CONTROLLER OF EXAMINATION \ RESULT FOR NOVEMBER 2022 EXAMINATION</b></marquee></mark></p>
     <hr>
-    <h1 align='center' style='color:#4c00b0';> <a> <img src='https://images.shiksha.com/mediadata/images/1601283419phpfyZRwV.png' width='80px' height='40px'></a>
+    <h1 align='center' style='color:#4c00b0';> <a> <img src='https://panimalaradmission.com/assets/images/image-2.png' width='80px' height='40px'></a>
     WELCOME TO PANIMALAR STUDENT PORTAL <a> <img src='https://panimalar.ac.in/assets/images/students.png' width='80px' height='40px'></a> </h1>
     <hr>
-  
-    <img src='https://panimalaradmission.com/assets/images/pec-logo.png' width='800px' height='130px' style=' margin-left:8%;'>
-  
-    <img src='https://panimalaradmission.com/assets/images/image-2.png' width='250px' height='130px' style='margin-left:0%;'> 
-    <hr> ";
+
+<img src='https://panimalaradmission.com/assets/images/pec-logo.png' width='800px' height='130px' style='margin-left:8%;'>
+
+<div class='hide-on-small-screen'>
+    <img src='https://panimalaradmission.com/assets/images/image-2.png' width='250px' height='130px' style='margin-left:0%;'>
+</div>
+
+<hr>
+ ";
 
     while ($row = $result->fetch_assoc()) {
         echo "";
@@ -112,7 +116,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "<p>No data available for this Register Number and DOB </p>";
     echo "<p>Please Check Once </p>";
-    echo" <a href=student.html>Go Back</a>";
+    echo" <a href=student.html> Go Back</a>";
 }
 
 $conn->close();
@@ -154,7 +158,21 @@ $conn->close();
             margin-left: 45%;
             background-color: yellow;
             border-radius: 5px;
+            padding:5px;
         }
+
+        @media (max-width: 1195px) {
+    .hide-on-small-screen {
+        display: none;
+        
+    }
+}       @media (min-width: 1195px) {
+    .hide-on-small-screen {
+        display: inline;
+        
+    }
+}
+
     </style>
 </head>
 

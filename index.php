@@ -22,10 +22,10 @@
 
         .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
             height: 100vh;
+            margin-left: 23%;
         }
+
 
         fieldset {
             width: 300px;
@@ -43,7 +43,7 @@
             background-color: yellow;
             padding: 10px;
             border-radius: 8px;
-            color:black;
+            color: black;
         }
 
         img {
@@ -76,6 +76,12 @@
 
         a {
             text-decoration: none;
+        }
+
+        @media screen and (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>

@@ -127,51 +127,29 @@
                     height="150px"></a>
             <h1 style="color:#DC143C; font-size: 150%;">FACULTY LOGIN</h1>
         </center>
-        <form action="admin2.html">
+        <form action="admin.php" method="POST">
             <center>
                 <table>
                     <tr>
-                        <td><input type="text" placeholder="FACULTY USERNAME" id="username" required
-                                style="width:250px; ">
-                        </td>
+                        <td><input type="text" placeholder="FACULTY USERNAME" name="username" required style="width:250px;"></td>
                     </tr>
                     <tr>
-                        <td><input type="password" required style="margin-top: 7%;" placeholder="PASSWORD"
-                                id="password"></td>
+                        <td><input type="password" required style="margin-top: 7%;" placeholder="PASSWORD" name="password"></td>
                     </tr>
-
                 </table>
             </center><br>
-
+        
             <center>
-                <button onclick="return validate();" class="sign">Sign In</button>
+                <button type="submit" class="sign">Sign In</button>
             </center>
         </form>
+        
     </fieldset>
-    <a href="index.html">
+    <a href="index.php">
         <h3>Home</h3>
     </a><br>
 
-    <script>
-        var a = document.getElementById("username");
-        var b = document.getElementById("password");
-
-        function validate() {
-            if (a.value === "" || b.value === "") {
-                alert("please Fill Both Fields")
-            }
-
-            else if (a.value === "AashathIT@pec.in" && b.value === "aashath0903") {
-                return true;
-            }
-            else {
-                alert("Username/Password is Wrong");
-                location.reload();
-                return false;
-            }
-
-        }
-    </script>
+   
 
 
 </body>

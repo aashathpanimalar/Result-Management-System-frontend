@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost:3307";
+$servername = "localhost:3306";
 $username = "root";
 $password = "";
 $dbname = "pec";
@@ -77,7 +77,7 @@ fsem8,fsubject8,fgrade8,fresult8,gpa) VALUES ('$name', '$regno','$dob','$dep','$
 if ($conn->query($sql) === TRUE) {
     echo "Result Uploaded Successfully!!";
     echo"<br><a href='admin2.html'>Upload Another result</a>";
-    echo"<br><a href='index.html'>Go Back</a>";
+    echo"<br><a href='index.php'>Go Back</a>";
 } else {
     die("Error: " . $conn->error);
 }
