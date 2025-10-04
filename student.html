@@ -125,66 +125,68 @@
   <fieldset>
     <center>
       <h1 style="color:#2565AE; font-size: 150%;">WELCOME TO <br>PANIMALAR ENGINEERING COLLEGE</h1>
-      <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYpbqJhX3Z5NXX0oJW5K5hIMt6Xvu8JSwRmA&s" width="100px"
-          height="100px"></a>
+      <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYpbqJhX3Z5NXX0oJW5K5hIMt6Xvu8JSwRmA&s" width="100px" height="100px"></a>
       <h1 style="color:#DC143C; font-size: 150%;">COE - STUDENT PORTAL</h1>
     </center>
-    <form action="student.php" method="post">
+
+    <form id="studentForm">
       <center>
         <table>
           <tr>
-            <td><input type="number" placeholder="ENTER REG NO" name="regno" id="regno" required style="width:250px; ">
-            </td>
+            <td><input type="number" placeholder="ENTER REG NO" id="regno" required style="width:250px;"></td>
           </tr>
           <tr>
-            <td><input type="text" name="dob" id="dob" required style="margin-top: 7%;" placeholder="DOB in dd-mm-yyyy"></td>
+            <td><input type="text" id="dob" required style="margin-top: 7%;" placeholder="DOB in dd-mm-yyyy"></td>
           </tr>
           <tr>
             <td style="display: flex;">
-              <input type="number" placeholder="Enter Captcha" id="t2" class="captcha" required
-                style="border-radius:0px;">
+              <input type="number" placeholder="Enter Captcha" id="t2" class="captcha" required style="border-radius:0px;">
               <h2 id="t1">image</h2>
             </td>
           </tr>
         </table>
       </center>
-      <center><button onclick="return validateCaptcha();" class="sign" name="signIn">Sign In</button></center>
+      <center><button type="submit" class="sign">Sign In</button></center>
     </form>
   </fieldset>
-  <a href="index.php">
-    <h3>Home</h3>
-  </a><br>
-  <a href="cgpa.html">
-    <button class="cgpa"><b>CGPA Calculator</b></button>
-    <br><br>
 
+  <a href="index.html"><h3>Home</h3></a><br>
+  <a href="cgpa.html"><button class="cgpa"><b>CGPA Calculator</b></button></a><br><br>
 
-    <script>
-      var a = document.getElementById("t1");
-      var b = Math.floor((Math.random() * 100000) + 1);
-      
-      if (b < 10000) {
-        b = b + 10000;
-      }
-      a.textContent = b;
-      function validateCaptcha() {
-        var captchaInput = document.getElementById("t2").value;
+  <script>
+    // Generate captcha
+    var a = document.getElementById("t1");
+    var b = Math.floor((Math.random() * 100000) + 1);
+    if (b < 10000) b += 10000;
+    a.textContent = b;
 
-        if (captchaInput == b) {
-          return true;
-        }
+    // Form submit handler
+    document.getElementById("studentForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      var regno = document.getElementById("regno").value.trim();
+      var dob = document.getElementById("dob").value.trim();
+      var captchaInput = document.getElementById("t2").value;
 
-        else {
-          alert("Enter a valid Captcha");
-          location.reload();
-          return false;
-
-        }
-
+      if (!regno || !dob || !captchaInput) {
+        alert("Fill all fields!");
+        return;
       }
 
-    </script>
+      if (parseInt(captchaInput) !== b) {
+        alert("Enter a valid Captcha");
+        location.reload();
+        return;
+      }
 
+      // Save RegNo + DOB to localStorage
+      localStorage.setItem("regno", regno);
+      localStorage.setItem("dob", dob);
+
+      // Redirect to result page
+      window.location.href = "student_result.html";
+    });
+  </script>
 </body>
+
 
 </html>

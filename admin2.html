@@ -103,7 +103,7 @@
 </head>
 
 <body bgcolor="lightblue">
-    <form action="admin2.php" method="post">
+    <form id="studentForm">
         <fieldset class="field">
             <center>
                 <table>
@@ -223,7 +223,8 @@
                 <hr>
                 <h4>GPA:<input type="text" name="gpa" id="gpa"></h4>
                 <hr>
-                <button onclick="return validate();">Insert into Database</button>
+               <button type="submit">Insert Result</button>
+
 
 
     </form>
@@ -297,22 +298,22 @@
                 alert("Fill All the Semester Fields");
                 return false;
             }
-            else if (fsubject1 == "" || fsubject2 == "" || fsubject3 == "" || fsubject4 == "" || fsubject5 == "" || fsubject6 == "" || fsubject7 == "" || fsubject8 == "") {
-                alert("Please Fill All the Subject-code");
-                return false;
-            }
-            else if (fgrade1 == "" || fgrade2 == "" || fgrade3 == "" || fgrade4 == "" || fgrade5 == "" || fgrade6 == "" || fgrade7 == "" || fgrade8 == "") {
-                alert("Fill All the Grades Fields");
-                return false;
-            }
-            else if (fresult1 == "" || fresult2 == "" || fresult3 == "" || fresult4 == "" || fresult5 == "" || fresult6 == "" || fresult7 == "" || fresult8 == "") {
-                alert("Please Fill All the Result Fields");
-                return false;
-            }
-            else if (gpa == "") {
-                alert("Please Enter the GPA");
-                return false;
-            }
+            // else if (fsubject1 == "" || fsubject2 == "" || fsubject3 == "" || fsubject4 == "" || fsubject5 == "" || fsubject6 == "" || fsubject7 == "" || fsubject8 == "") {
+            //     alert("Please Fill All the Subject-code");
+            //     return false;
+            // }
+            // else if (fgrade1 == "" || fgrade2 == "" || fgrade3 == "" || fgrade4 == "" || fgrade5 == "" || fgrade6 == "" || fgrade7 == "" || fgrade8 == "") {
+            //     alert("Fill All the Grades Fields");
+            //     return false;
+            // }
+            // else if (fresult1 == "" || fresult2 == "" || fresult3 == "" || fresult4 == "" || fresult5 == "" || fresult6 == "" || fresult7 == "" || fresult8 == "") {
+            //     alert("Please Fill All the Result Fields");
+            //     return false;
+            // }
+            // else if (gpa == "") {
+            //     alert("Please Enter the GPA");
+            //     return false;
+            // }
             else {
                 return true;
             }
@@ -321,6 +322,8 @@
     </script>
 
     </form>
+    <script src="admin2.js"></script>
+
 </body>
 
 </html>

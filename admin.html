@@ -127,14 +127,15 @@
                     height="150px"></a>
             <h1 style="color:#DC143C; font-size: 150%;">FACULTY LOGIN</h1>
         </center>
-        <form action="admin.php" method="POST">
+        <!-- <form action="admin.js" method="POST"> -->
+            <form id="loginForm">
             <center>
                 <table>
                     <tr>
-                        <td><input type="text" placeholder="FACULTY USERNAME" name="username" required style="width:250px;"></td>
+                        <td><input type="text" placeholder="FACULTY USERNAME" id="username" required style="width:250px;"></td>
                     </tr>
                     <tr>
-                        <td><input type="password" required style="margin-top: 7%;" placeholder="PASSWORD" name="password"></td>
+                        <td><input type="password" required style="margin-top: 7%;" placeholder="PASSWORD" id="password"></td>
                     </tr>
                 </table>
             </center><br>
@@ -145,13 +146,10 @@
         </form>
         
     </fieldset>
-    <a href="index.php">
+    <a href="index.html">
         <h3>Home</h3>
     </a><br>
-
-   
-
-
+    <script src="admin.js"></script>
 </body>
 
 </html>
